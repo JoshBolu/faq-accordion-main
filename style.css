@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Work Sans', sans-serif;
+}
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Light-pink: hsl(275, 100%, 97%);
+    --Grayish-purple: hsl(292, 16%, 49%);
+    --Dark-purple: hsl(292, 42%, 14%);
+    --purple: hsl(293, 90%, 42%);
+    --normal-font-size: 16px;
+    --small-font-size: 12px;
+    --big-font-size: 20px;
+}
+hr{
+    color: var(--Grayish-purple);
+    opacity: 0.3;
+    /* margin: 16px 0; */
+}
+.overall-cont{
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(275, 100%, 97%);
+}
+.fixed-bg-image{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 40vh;
+    background-image: url(background-pattern-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.faq-cont{
+    position: absolute;
+    z-index: 4;
+    background-color: white;
+    width: 500px;
+    border-radius: 8px;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 40px;
+}
+.faq-logo{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+.faq-logo h2{
+    font-size: 40px;
+    color: var(--Dark-purple);
+    font-weight: 700;
+}
+.all-question-cont h5{
+    color: var(--Dark-purple);
+    font-weight: 700;
+}
+.question-cont:hover h5{
+    color: var(--purple);
+}
+.all-question-cont p{
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--Grayish-purple);
+    line-height: 1.6;
+    word-spacing: 2px;
+}
+.question-cont{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 16px 0;
+}       
+.answer-cont{
+    padding: 0 8px;
+    display: none;
+}
+
+
+@media(max-width: 580px){
+    .fixed-bg-image{
+        background-image: url(background-pattern-mobile.svg);
+    }
+    .faq-cont{
+        width: 90%;
+        padding: 24px;
+    }
+    .question-cont{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        gap: 16px;
+        padding: 16px 0;
+    }
+}
+
+.attribution{ 
+    position: fixed;
+    font-size: 11px; 
+    text-align: center; 
+    z-index: 8;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+}
+.attribution a { color: hsl(228, 45%, 44%); }
