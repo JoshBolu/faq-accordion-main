@@ -23,6 +23,7 @@ hr{
     width: 100%;
     height: 100vh;
     background-color: hsl(275, 100%, 97%);
+    overflow: hidden;
 }
 .fixed-bg-image{
     position: fixed;
